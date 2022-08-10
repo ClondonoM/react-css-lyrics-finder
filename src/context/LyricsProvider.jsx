@@ -14,8 +14,9 @@ const LyricsProvider = ({ children }) => {
       const url = `https://api.lyrics.ovh/v1/${artist}/${song}`;
       const { data } = await axios(url);
       setLyric(data.lyrics);
+      setAlert('');
     } catch (err) {
-      console.log(err);
+      setAlert('Song not found');
     }
     setLoading(false);
   };

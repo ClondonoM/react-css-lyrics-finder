@@ -14,7 +14,6 @@ const Form = () => {
       return;
     }
     searchLyric(search);
-    setAlert('');
   };
   return (
     <form onSubmit={handleSubmit}>
