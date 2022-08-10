@@ -6,19 +6,23 @@ const LyricsContext = createContext();
 const LyricsProvider = ({ children }) => {
   const [alert, setAlert] = useState('');
   const [lyric, setLyric] = useState('');
+  const [loading, setLoading] = useState(false);
   const searchLyric = async (search) => {
+    setLoading(true);
     try {
       const { artist, song } = search;
       const url = `https://api.lyrics.ovh/v1/${artist}/${song}`;
       const { data } = await axios(url);
       setLyric(data.lyrics);
-      console.log(lyric);
     } catch (err) {
       console.log(err);
     }
+    setLoading(false);
   };
   return (
-    <LyricsContext.Provider value={{ alert, setAlert, searchLyric }}>
+    <LyricsContext.Provider
+      value={{ alert, setAlert, searchLyric, lyric, loading }}
+    >
       {children}
     </LyricsContext.Provider>
   );
