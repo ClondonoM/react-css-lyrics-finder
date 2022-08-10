@@ -1,6 +1,8 @@
 import Form from './Form';
 import Alert from './Alert';
 import Lyric from './Lyric';
+import Spinner from './Spinner';
+
 import useLyrics from '../hooks/useLyrics';
 
 const AppLyrics = () => {
@@ -15,7 +17,7 @@ const AppLyrics = () => {
         ) : lyric ? (
           <Lyric />
         ) : loading ? (
-          'loading...'
+          <Spinner />
         ) : (
           <p className='text-center '>Search Lyrics</p>
         )}
