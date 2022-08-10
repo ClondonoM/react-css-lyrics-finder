@@ -2,7 +2,7 @@ import { useState } from 'react';
 import useLyrics from '../hooks/useLyrics';
 
 const Form = () => {
-  const { setAlert } = useLyrics();
+  const { setAlert, searchLyric } = useLyrics();
   const [search, setSearch] = useState({
     artist: '',
     song: '',
@@ -13,6 +13,7 @@ const Form = () => {
       setAlert('Please fill out all fields');
       return;
     }
+    searchLyric(search);
     setAlert('');
   };
   return (
