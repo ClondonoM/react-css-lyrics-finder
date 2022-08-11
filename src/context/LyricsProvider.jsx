@@ -13,6 +13,8 @@ const LyricsProvider = ({ children }) => {
   const [loading, setLoading] = useState(false);
   const searchLyric = async (search) => {
     setLoading(true);
+    setLyric('');
+    setAlert('');
     try {
       const { artist, song } = search;
       const url = `https://api.lyrics.ovh/v1/${artist}/${song}`;

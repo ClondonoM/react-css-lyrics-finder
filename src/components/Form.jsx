@@ -3,10 +3,6 @@ import useLyrics from '../hooks/useLyrics';
 
 const Form = () => {
   const { search, setSearch, setAlert, searchLyric } = useLyrics();
-  // const [search, setSearch] = useState({
-  //   artist: '',
-  //   song: '',
-  // });
   const handleSubmit = (e) => {
     e.preventDefault();
     if (Object.values(search).includes('')) {
