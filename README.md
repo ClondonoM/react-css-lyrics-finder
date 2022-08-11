@@ -2,7 +2,8 @@
 
 ## react-css-lyrics-finder
 
-Lyrics Finder App allows you find the song of your favorite artist. This application uses useContext react hook to manage information between components.
+Lyrics Finder App allows you find the song of your favorite artist. Connect to https://api.lyrics.ovh/v1 api using axios.
+This application uses useContext react hook to manage information between components.
 It was created with react and css.
 
 ## Getting Started with Vite React App
