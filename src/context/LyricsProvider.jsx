@@ -33,7 +33,6 @@ const LyricsProvider = ({ children }) => {
         setSearch,
         alert,
         setAlert,
-        search,
         searchLyric,
         lyric,
         loading,
