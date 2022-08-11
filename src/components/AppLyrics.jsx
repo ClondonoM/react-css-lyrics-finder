@@ -6,7 +6,7 @@ import Spinner from './Spinner';
 import useLyrics from '../hooks/useLyrics';
 
 const AppLyrics = () => {
-  const { alert, lyric, loading } = useLyrics();
+  const { alert, lyric, setLyric, loading } = useLyrics();
   return (
     <>
       <header>Lyrics Finder</header>

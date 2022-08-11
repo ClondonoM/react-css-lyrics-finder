@@ -22,7 +22,7 @@ const LyricsProvider = ({ children }) => {
   };
   return (
     <LyricsContext.Provider
-      value={{ alert, setAlert, searchLyric, lyric, loading }}
+      value={{ alert, setAlert, search, searchLyric, lyric, loading }}
     >
       {children}
     </LyricsContext.Provider>
