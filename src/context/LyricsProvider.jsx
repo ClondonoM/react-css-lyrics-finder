@@ -4,6 +4,10 @@ import axios from 'axios';
 const LyricsContext = createContext();
 
 const LyricsProvider = ({ children }) => {
+  const [search, setSearch] = useState({
+    artist: '',
+    song: '',
+  });
   const [alert, setAlert] = useState('');
   const [lyric, setLyric] = useState('');
   const [loading, setLoading] = useState(false);
@@ -22,7 +26,16 @@ const LyricsProvider = ({ children }) => {
   };
   return (
     <LyricsContext.Provider
-      value={{ alert, setAlert, search, searchLyric, lyric, loading }}
+      value={{
+        search,
+        setSearch,
+        alert,
+        setAlert,
+        search,
+        searchLyric,
+        lyric,
+        loading,
+      }}
     >
       {children}
     </LyricsContext.Provider>
